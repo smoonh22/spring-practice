@@ -19,11 +19,11 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         http
             .authorizeRequests()
                 .antMatchers("/").access("hasRole('READER')")
-                .antMatchers("/**").permitAll()
-            .and()
-            .formLogin()
-                .loginPage("/login")
-                .failureUrl("/login?error=true");
+                .antMatchers("/**").permitAll();
+//            .and()
+//            .formLogin()
+//                .loginPage("/login")
+//                .failureUrl("/login?error=true");
     }
 
     @Override
